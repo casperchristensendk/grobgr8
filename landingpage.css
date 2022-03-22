@@ -1,0 +1,277 @@
+* {
+  box-sizing: border-box;
+}
+
+img {
+  width: 100%;
+}
+
+.popup {
+  width: 500px;
+}
+
+.hensigt {
+  width: 50%;
+  justify-content: left;
+}
+
+/* img .nick {
+  width: 100%;
+}
+
+img .andreas {
+  width: 100%;
+} */
+
+.logo img {
+  width: 150px;
+}
+
+img #hjul {
+  width: auto;
+}
+
+h1 {
+  font-size: 30px;
+  color: #007f61;
+  font-style: italic;
+}
+
+h2 {
+  font-size: 15px;
+  justify-content: flex-end;
+  color: #007f61;
+}
+
+p {
+  font-size: 15px;
+  color: black;
+  font-family: Helvetica, sans-serif;
+}
+
+hr {
+  color: #007f61;
+}
+
+#grad1 {
+  height: 2800px;
+  background-color: red; /* For browsers that do not support gradients */
+  background-image: linear-gradient(#dbe152, #e5e5e3);
+  z-index: -10;
+}
+
+video {
+  grid-column: 1 / span 3;
+  grid-row: 1 / span 3;
+  width: 100%;
+  /* height: 100%; */
+  object-fit: cover;
+  border: 10px solid #dbe152;
+}
+
+.video-wrapper {
+  /* border: 10px solid #dbe152; */
+  /* display: grid; */
+  grid-template-columns: 1fr minmax(200px, 500px) 1fr;
+  grid-template-rows: 1fr minmax(200px, 500px) 1fr;
+
+  max-height: 100wh;
+  /* aspect-ratio: 1/1; */
+  margin: 0 auto;
+}
+body {
+  margin: 0;
+  font-family: Helvetica, sans-serif;
+  /* background-image: url(1920b.svg); */
+}
+
+.header {
+  overflow: hidden;
+  padding: 20px 10px;
+  background-color: rgba(0, 0, 0, 0);
+  color: white;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 150px;
+  padding: 0;
+  margin: 0;
+  font-size: clamp(1rem, 2.5vw, 2rem);
+  font-style: italic;
+}
+
+.header a {
+  float: left;
+  color: #dbe152;
+  text-align: center;
+  padding: 20px;
+  text-decoration: none;
+  font-size: 20px;
+  line-height: 25px;
+  border-radius: 4px;
+}
+
+.logo {
+  font-size: clamp(1rem, 2.5vw, 2rem);
+}
+
+.header a.logo {
+  font-size: 25px;
+  font-weight: bold;
+}
+
+.header a:hover {
+  /* background-color: #ddd; */
+  color: black;
+}
+
+.header a.active {
+  background-color: dodgerblue;
+  color: white;
+}
+
+.header-right {
+  float: right;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+  gap: 50px;
+  margin: 20px;
+  justify-content: space-around;
+}
+
+@media screen and (max-width: 400px) {
+  .header a {
+    float: none;
+    display: block;
+    text-align: left;
+  }
+
+  .header-right {
+    float: none;
+  }
+
+  .popup .popuptext {
+    width: 50%;
+  }
+}
+footer {
+  /* background-color: #e5e5e3; */
+  text-align: center;
+  /* justify-content: space-between; */
+  justify-content: space-around;
+  margin: 10px;
+}
+footer img {
+  width: 40px;
+}
+
+footer .billet {
+  width: 140px;
+}
+.clickme {
+  /* background-color: #e5e5e3; */
+  display: flex;
+  font-family: Helvetica, sans-serif;
+  font-size: 40px;
+  padding: 100px;
+  margin-top: 10px;
+  color: #de1917;
+  font-weight: bold;
+  font-family: Knock;
+  justify-content: center;
+}
+/* POP UP HER  */
+
+/* Popup container */
+.popup {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+}
+
+/* The actual popup (appears on top) */
+.popup .popuptext {
+  visibility: hidden;
+  width: 160px;
+  /* background-color: #555; */
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 8px 0;
+  position: absolute;
+  z-index: 1;
+  bottom: 125%;
+  left: 0%;
+  margin-left: 0px;
+}
+
+/* Popup arrow */
+.popup .popuptext::after {
+  /* content: ""; */
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: #555 transparent transparent transparent;
+}
+
+/* Toggle this class when clicking on the popup container (hide and show the popup) */
+.popup .show {
+  visibility: visible;
+  -webkit-animation: fadeIn 1s;
+  animation: fadeIn 1s;
+  width: auto;
+}
+
+/* Add animation (fade in the popup) */
+@-webkit-keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* KNAP HER  */
+
+.button {
+  background-color: #de1917; /* Green */
+  border: none;
+  color: white;
+  padding: 16px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 20px;
+  margin: 4px 2px;
+  transition-duration: 0.4s;
+  cursor: pointer;
+  font-style: italic;
+}
+
+.button {
+  background-color: #007f61;
+  color: #e5e5e3;
+  border: 2px solid #de1917;
+}
+
+.button:hover {
+  background-color: #dbe152;
+  color: #de1917;
+}
